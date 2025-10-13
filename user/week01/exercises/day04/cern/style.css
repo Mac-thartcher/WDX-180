@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+h1 {
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #0000ee;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
