@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Native Form Controls</title>
+</head>
+<body>
+  <h1>Basic Native Form Controls</h1>
+
+  <form action="/my-handling-form-page" method="post">
+    <p>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="user_name" />
+    </p>
+
+    <p>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="user_email" />
+    </p>
+
+    <p>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="user_password" />
+    </p>
+
+    <p>
+      <label for="telephone">Telephone:</label>
+      <input type="tel" id="telephone" name="user_tel" />
+    </p>
+
+    <p>
+      <label for="number">How many items?</label>
+      <input type="number" id="number" name="item_count" min="1" max="10" />
+    </p>
+
+    <p>
+      <label for="file">Upload a file:</label>
+      <input type="file" id="file" name="my_file" />
+    </p>
+
+    <p>
+      <label for="color">Choose a color:</label>
+      <input type="color" id="color" name="fav_color" />
+    </p>
+
+    <p>
+      <label for="date">Select a date:</label>
+      <input type="date" id="date" name="selected_date" />
+    </p>
+
+    <p>
+      <label for="time">Select a time:</label>
+      <input type="time" id="time" name="selected_time" />
+    </p>
+
+    <p>
+      <label for="range">Select a range:</label>
+      <input type="range" id="range" name="range_value" min="0" max="100" />
+    </p>
+
+    <p>
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="user_message" rows="4" cols="40"></textarea>
+    </p>
+
+    <p>
+      <label for="dropdown">Select an option:</label>
+      <select id="dropdown" name="option">
+        <option value="1">Option one</option>
+        <option value="2">Option two</option>
+        <option value="3">Option three</option>
+      </select>
+    </p>
+
+    <fieldset>
+      <legend>Choose your interests</legend>
+      <label><input type="checkbox" name="interest" value="coding" /> Coding</label>
+      <label><input type="checkbox" name="interest" value="music" /> Music</label>
+      <label><input type="checkbox" name="interest" value="sports" /> Sports</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Select your gender</legend>
+      <label><input type="radio" name="gender" value="male" /> Male</label>
+      <label><input type="radio" name="gender" value="female" /> Female</label>
+      <label><input type="radio" name="gender" value="other" /> Other</label>
+    </fieldset>
+
+    <p>
+      <input type="submit" value="Submit form" />
+    </p>
+  </form>
+</body>
+</html>
