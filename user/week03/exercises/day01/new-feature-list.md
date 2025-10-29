@@ -1,0 +1,21 @@
+# Step-by-step list for a new feature
+
+- git status
+- Check the current state of the repository (e.g  untracked files, current branch).
+- git pull
+- Download and integrate the latest changes from the remote repository (`origin/main`) into the current local branch.
+- git branch -a
+- See all local and remote branches to ensure the new branch name is unique and check branch history.
+- git checkout -b feature/new-feature-name
+- Create a **new branch** specifically for the feature (it's good practice to prefix with `feature/`) and immediately **switch** to it.
+- **... work on the feature (edit/add files) ...**
+- git status
+- Check what files have been modified or created in the working directory.
+- git add .
+- Stage all changes (new, modified, and deleted files) for the next commit.
+- git commit -m "feat: brief description of the feature/changes"
+- Save the staged changes to the local branch history with a meaningful commit message.
+- git status
+- Confirm there are no uncommitted changes left.
+- git push -u origin feature/new-feature-name
+- Upload the new feature branch and its commits to the remote repository (**GitHub**) for backup and to create a Pull Request.
