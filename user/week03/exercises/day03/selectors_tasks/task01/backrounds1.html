@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Backgrounds and Borders: Task 1</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Styling for the outer box */
+      .box {
+        width: 500px;
+        padding: 0.5em;
+        /* 1. 5px black solid border with 10px rounded corners */
+        border: 5px solid black;
+        border-radius: 10px;
+        /* 2. Background image set to cover the box */
+        background-image: url('../images/balloons.jpg');
+
+        background-size: cover;
+      }
+      
+      /* Styling for the header text */
+      .box h2 {
+        /* 3. Semi-transparent black background (rgba) and white text */
+        background-color: rgba(0, 0, 0, 0.5); 
+        color: white;
+        padding: 0.5em;
+        margin: 0; /* Important: Removes default margin to prevent gaps */
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="box">
+      <h2>Backgrounds &amp; Borders</h2>
+    </div>
+
+  </body>
+</html>
