@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azure Fundamentals Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        padding: 20px;
+      }
+
+      /* --- Header Styles --- */
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      .subheader {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      /* --- Table Container and Basic Styles --- */
+      .course-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* --- Table Header (thead) Styles --- */
+      .course-table thead {
+        background-color: #0078d4; /* Azure Blue */
+        color: white;
+        font-size: 0.85rem;
+        text-align: left;
+        font-weight: bold;
+      }
+
+      .course-table th {
+        padding: 12px 15px;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .course-table th:last-child {
+        border-right: none;
+      }
+
+      /* --- Table Body (tbody) Styles --- */
+      .course-table td {
+        padding: 15px;
+        border-right: 1px solid #eee;
+        border-bottom: 1px solid #ddd;
+        vertical-align: top;
+        font-size: 0.95rem;
+      }
+
+      .course-table td:last-child {
+        border-right: none;
+      }
+
+      .exam-code {
+        font-weight: 600;
+      }
+
+      /* Styling the links */
+      .course-table a {
+        color: #0078d4;
+        text-decoration: none;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        display: block;
+        margin-top: 5px;
+      }
+
+      /* Remove bottom border from the last row */
+      .course-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Course details for Azure Fundamentals</h1>
+      <p class="subheader">1 Instructor-led training course</p>
+    </div>
+
+    <table class="course-table">
+      <thead>
+        <tr>
+          <th>Exam titles</th>
+          <th>Course title / training titles</th>
+          <th>Course ID</th>
+          <th>Course duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Microsoft Azure Fundamentals
+            <a href="#">EXAM AZ-900</a>
+          </td>
+          <td>Microsoft Azure Fundamentals</td>
+          <td>
+            <a href="#" class="exam-code">AZ-900T01</a>
+          </td>
+          <td>1 Day</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
