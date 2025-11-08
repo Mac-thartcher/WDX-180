@@ -1,8 +1,8 @@
 body {
   font-family: Arial, sans-serif;
   margin: 2rem;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  color:#000;
 }
 
 h1 {
@@ -13,13 +13,19 @@ h1 {
 
 p {
   margin-bottom: 1rem;
+  color: #000;
 }
-
+/* 
 a {
   color: #0202e4;
   text-decoration: none;
+} */
+
+a:link,a:visited {
+  color: #0000CC;
+  text-decoration: underline;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
