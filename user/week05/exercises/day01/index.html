@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Field Preview</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="wrapper">
+        <div class="input-block">
+            <label for="msg1">Enter your message:</label>
+            <div class="input-wrapper">
+                <input id="msg1" type="text" placeholder="Placeholder text here" />
+                <span class="char-count">0/30 characters</span>
+            </div>
+        </div>
+
+        <div class="input-block">
+            <label for="msg2">Enter your message:</label>
+            <div class="input-wrapper">
+                <input id="msg2" type="text" value="Border color with value typed" />
+                <span class="char-count">29/30 characters</span>
+            </div>
+        </div>
+
+        <div class="input-block">
+            <label for="msg3">Enter your message:</label>
+            <div class="input-wrapper">
+                <input id="msg3" type="text" value="Border color on mouse hover" />
+                <span class="char-count">27/30 characters</span>
+            </div>
+        </div>
+
+        <div class="input-block">
+            <label for="msg4">Enter your message:</label>
+            <div class="input-wrapper">
+                <input id="msg4" type="text" value="Border color on focus" />
+                <span class="char-count">21/30 characters</span>
+            </div>
+        </div>
+
+        <div class="input-block">
+            <label for="msg5">Enter your message:</label>
+            <div class="input-wrapper">
+                <input 
+                    id="msg5" 
+                    type="text" 
+                    value="Oops! There's a validation error! More characters than allowed"
+                    maxlength="30" 
+                    pattern="[A-Za-z0-9!@_\-\$\(\) ]{1,30}" 
+                    required 
+                    class="error-demo" 
+                />
+                <span class="char-count">71/30 characters</span>
+            </div>
+             <p class="error-text">Ops! There's a validation error! More characters that the allowed</p>
+        </div>
+    </main>
+</body>
+</html>

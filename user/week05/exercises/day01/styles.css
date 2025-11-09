@@ -1,0 +1,101 @@
+:root {
+    --color-bg-page: #282828;
+    --color-bg-input: #383838;
+    --color-text-input-value: #d0d0d0;
+    --color-text-placeholder: #767676;
+    --color-text-label: #d0d0d0;
+    --color-text-counter: #767676;
+    --color-border-default: #4c4c4c;
+    --color-border-hover: #8f8f8f;
+    --color-border-focus: #7c9dbd;
+    --color-border-error: #862e2a;
+    --font-primary: Arial, Helvetica, sans-serif;
+    --spacing-input-counter: 10px;
+}
+
+body {
+    background-color: var(--color-bg-page);
+    font-family: var(--font-primary);
+    color: var(--color-text-input-value);
+    padding: 40px;
+    margin: 0;
+}
+
+.form-field {
+    max-width: 600px;
+    margin-bottom: 30px; 
+}
+
+.form-field__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: var(--color-text-label);
+}
+
+.form-field__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.form-field__counter {
+    font-size: 0.9em;
+    color: var(--color-text-counter);
+    user-select: none;
+    margin-left: var(--spacing-input-counter); 
+    line-height: 40px; 
+}
+
+.form-field__input {
+    flex-grow: 1; 
+    height: 40px;
+    padding: 0 15px; 
+    box-sizing: border-box;
+    background-color: var(--color-bg-input);
+    color: var(--color-text-input-value);
+    border: 2px solid var(--color-border-default);
+    border-radius: 4px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-field__input::placeholder {
+    color: var(--color-text-placeholder);
+}
+
+.form-field__input:focus {
+    outline: none;
+}
+
+.form-field__input:invalid {
+    box-shadow: none; 
+}
+
+.form-field__input:hover {
+    border-color: var(--color-border-hover);
+}
+
+.form-field__input:focus {
+    border-color: var(--color-border-focus);
+}
+
+.form-field__label:hover + .form-field__wrapper .form-field__input {
+    border-color: var(--color-border-focus);
+}
+
+.form-field__input:invalid:not(:placeholder-shown) {
+    border-color: var(--color-border-error);
+}
+
+.form-field__error {
+    color: var(--color-border-error);
+    margin-top: 5px;
+    padding: 0.5em 0.5em;
+    border: 2px solid var(--color-border-error);
+    border-radius: 4px;
+    font-size: 0.9em;
+    display: none; 
+}
+
+.form-field__input:invalid:not(:placeholder-shown) ~ .form-field__error {
+    display: block;
+}
