@@ -10,7 +10,6 @@
     --color-border-focus: #7c9dbd;
     --color-border-error: #862e2a;
     --font-primary: Arial, Helvetica, sans-serif;
-    --spacing-input-counter: 10px;
 }
 
 body {
@@ -22,8 +21,8 @@ body {
 }
 
 .form-field {
-    max-width: 600px;
-    margin-bottom: 30px; 
+    max-width: 400px;
+    margin-bottom: 20px;
 }
 
 .form-field__label {
@@ -34,32 +33,31 @@ body {
 }
 
 .form-field__wrapper {
-    display: flex;
-    align-items: center;
+    position: relative;
 }
 
 .form-field__counter {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
     font-size: 0.9em;
     color: var(--color-text-counter);
-    user-select: none;
-    margin-left: var(--spacing-input-counter); 
-    line-height: 40px; 
 }
 
 .form-field__input {
-    flex-grow: 1; 
+    width: 100%;
     height: 40px;
-    padding: 0 15px; 
+    padding: 0 100px 0 15px;
     box-sizing: border-box;
+    
     background-color: var(--color-bg-input);
     color: var(--color-text-input-value);
+    
     border: 2px solid var(--color-border-default);
     border-radius: 4px;
+    
     transition: border-color 0.2s ease-in-out;
-}
-
-.form-field__input::placeholder {
-    color: var(--color-text-placeholder);
 }
 
 .form-field__input:focus {
@@ -67,9 +65,10 @@ body {
 }
 
 .form-field__input:invalid {
-    box-shadow: none; 
+    box-shadow: none;
 }
 
+/* State Handlers (Hover, Focus, Validation) */
 .form-field__input:hover {
     border-color: var(--color-border-hover);
 }
@@ -82,20 +81,22 @@ body {
     border-color: var(--color-border-focus);
 }
 
+/* Validation Error State */
 .form-field__input:invalid:not(:placeholder-shown) {
     border-color: var(--color-border-error);
 }
 
+/* Extra Challenge: Error Message Display */
 .form-field__error {
     color: var(--color-border-error);
     margin-top: 5px;
-    padding: 0.5em 0.5em;
+    padding: 0.5em 1em;
     border: 2px solid var(--color-border-error);
     border-radius: 4px;
-    font-size: 0.9em;
     display: none; 
 }
 
+/*  error message  */
 .form-field__input:invalid:not(:placeholder-shown) ~ .form-field__error {
     display: block;
 }
