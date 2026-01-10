@@ -41,6 +41,9 @@ function makeGetUserByIdWithOrganization(getUserById, getOrganizationById){
   return function getUserByIdWithOrganization(userId){
     /* IMPLEMENT ME! */return getUserById(userId)
     .then((user) => {
+      if (!user) {
+        return undefined;
+      }
       return getOrganizationById(user.organizationId)
           .then((organization) => {
             user.organization = organization;
@@ -48,6 +51,7 @@ function makeGetUserByIdWithOrganization(getUserById, getOrganizationById){
           })
     })
   };
+  
 }
 
 module.exports = {
